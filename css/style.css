@@ -86,15 +86,8 @@ i,
   cursor: pointer;
 }
 /** ======= Popup Nav Bar ========  */
-/* radio inputs  */
-/* #navTogl,
-#cartTogl,
-#userTogl,
-#closerTogl {
-  display: none;
-} */
 .popup {
-  width: 0;
+  /* width: 0; */
   height: 100vh;
   background-color: #00000080;
   z-index: 55;
@@ -112,7 +105,7 @@ i,
 #rightNav {
   position: absolute;
   right: 0;
-  width: 0;
+  /* width: 0; */
   height: 100vh;
   background-color: var(--white);
   display: grid;
@@ -132,9 +125,7 @@ i,
 .navContainer ul li a:hover {
   color: var(--text);
 }
-.popupChild {
-  display: none;
-}
+
 /* ***** Cart Page  ****/
 .cartContainer {
 align-self: flex-start;
@@ -164,51 +155,36 @@ color: var(--text);
 /* ***** User Page *** */
 .userContainer {
   width: 90%;
-  padding:30px 20px;
+  padding: 20px 15px;
   border: 1px solid black;
 }
-form #email,
-form #pass {
+.userContainer * {
+  font-size: 15px;
+  color: var(--text);
+}
+.userContainer form #email,
+.userContainer form #pass {
   width: 100%;
   height: 44px;
   line-height: 40px;
   padding-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 16px;
 }
-form button {
+.userContainer form button {
   width: 100%;
   margin-bottom: 20px;
-  
+  font-size: 18px !important;
+  color: var(--white) !important;
 }
-/* #navTogl:checked ~ .popup,
-#cartTogl:checked ~ .popup,
-#userTogl:checked ~ .popup {
-width: 100vw;
+.userContainer h4 {
+  font-size: 20px;
+  color: var(--green);
 }
-#navTogl:checked ~ .popup #rightNav,
-#cartTogl:checked ~ .popup #rightNav,
-#userTogl:checked ~ .popup #rightNav {
-width: 300px;
+.userContainer form a {
+  color: var(--green);
+  text-decoration: none;
 }
-#cartTogl:checked ~ .popup #rightNav .closer,
-#userTogl:checked ~ .popup #rightNav .closer,
-#navTogl:checked ~ .popup #rightNav .closer {
-  animation: rotation 0.6s;
-}
-#navTogl:checked ~ .popup #rightNav .cartContainer,
-#navTogl:checked ~ .popup #rightNav .userContainer {
-  display: none;
-}
-#cartTogl:checked ~ .popup #rightNav .navContainer,
-#cartTogl:checked ~ .popup #rightNav .userContainer {
-  display: none;
-}
-#userTogl:checked ~ .popup #rightNav .cartContainer,
-#userTogl:checked ~ .popup #rightNav .navContainer {
-  display: none;
-} */
 
 /****! Main section : Slides Using Animation  ****/
 main {
