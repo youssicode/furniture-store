@@ -9,8 +9,6 @@
     <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Custom CSS file - V2 To Practice making the same Layouts with diffrent Styling. -->
-    <!-- <link rel="stylesheet" href="./css/style-V2.css" />  -->
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,18 +27,11 @@
   </head>
   <body>
     <!-- Header Bar  -->
-    <!-- 
-      <input type="radio" name="menu" id="navTogl">
-      <input type="radio" name="menu" id="cartTogl">
-      <input type="radio" name="menu" id="userTogl">
-     -->
     <div id="popupId" class="popup">
-      <!-- <input type="radio" name="menu" id="closerTogl"> -->
       <div id="rightNav">
-        <!-- <label for="closerTogl" class="closer"><i class="fas fa-times"></i></label> -->
         <div id="closerId" onclick="closePopup()"><i class="fas fa-times"></i></div>
 
-        <div id="navId" class="navContainer popupChild">
+        <div id="navId" class="navContainer">
           <ul>
             <li><a href="#">home</a></li>
             <li><a href="#">shop</a></li>
@@ -51,7 +42,7 @@
           </ul>
         </div>
 
-        <div id="cartId" class="cartContainer popupChild">
+        <div id="cartId" class="cartContainer">
           <div id="cartItem1" class="cartItem"> 
             <img src="./images/cart-img-1.jpg" alt="item1">
             <div class="itemDesc">
@@ -95,7 +86,7 @@
           <button>checkout cart</button>
         </div>
 
-        <div id="userId" class="userContainer popupChild">
+        <div id="userId" class="userContainer">
           <h4>login form</h4>
           <form action="post">
             <input type="email" name="email" id="email" placeholder="enter your email">
@@ -103,8 +94,8 @@
             <input type="checkbox" id="rememberMe">
             <label for="rememberMe">Remember Me</label>
             <button>login now</button>
-            <p>forget password? <span>click here</span></p>
-            <p>don't have an account? <span>create one</span></p>
+            <p>forget password? <a href="#">click here</a></p>
+            <p>don't have an account? <a href="#">create one</a></p>
           </form>
         </div>
 
@@ -124,9 +115,6 @@
           <label onclick="displayNav()" ><i class="fas fa-bars"></i></label>
           <label onclick="displayCart()"><i class="fas fa-shopping-cart"></i></label>
           <label onclick="displayUser()"><i class="fas fa-user"></i></label>
-          <!-- <label for="navTogl"><i class="fas fa-bars"></i></label>
-          <label for="cartTogl"><i class="fas fa-shopping-cart"></i></labelonclick=>
-          <label for="userTogl"><i class="fas fa-user"></i></label> -->
         </div>
       </div>
     </header>
@@ -134,14 +122,11 @@
     <!-- Main Screen -->
     <main>
       <div class="container slidesParent">
-        <!--! Carousel Wihtout JavaScript (Using Radio type of inputs) -->
-        <input type="radio" name="slideCntrl" id="leftCntrl" checked/>
-        <label class="sldLcntrl" for="leftCntrl">&lt;</label>
-        <input type="radio" name="slideCntrl" id="rightCntrl" />
-        <label class="sldRcntrl" for="rightCntrl">&gt;</label>
+        <label class="sldLcntrl" onclick="slideLeft()">&lt;</label>
+        <label class="sldRcntrl" onclick="slideRight()">&gt;</label>
 
         <div class="slideBox">
-          <div class="slide slide1">
+          <div id="slideId1" class="slide slide1">
             <div class="slideDesc">
               <h3>new arrivals</h3>
               <h1>flexible chair</h1>
@@ -159,7 +144,7 @@
             />
           </div>
 
-          <div class="slide slide2">
+          <div id="slideId2" class="slide slide2">
             <div class="slideDesc">
               <h3>new arrivals</h3>
               <h1>desktop sofa</h1>
@@ -176,6 +161,22 @@
             />
           </div>
           
+          <div id="slideId3" class="slide slide3">
+            <div class="slideDesc">
+              <h3>new arrivals</h3>
+              <h1>new fourniture</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia odio rerum quia ratione doloribus iste.
+              </p>
+              <button>shop now</button>
+            </div>
+            <img
+              class="slidePhoto"
+              src="./images/home-img-3.png"
+              alt="Photo-Slider"
+            />
+          </div>
         </div>
       </div>
     </main>
