@@ -1,0 +1,427 @@
+:root {
+  --green: #244d4d;
+  --green-light: #f6fbf6;
+  --text: #779;
+  --white: #fff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  transition: .2s linear;
+  -webkit-transition: .2s linear;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--green-light);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+}
+.container {
+  /* Commun to all sections */
+  width: 82vw;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Sections identical properties  */
+header,
+main,
+.offers,
+.mapSection {
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+header {
+  background-color: var(--green-light);
+}
+.headBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--green);
+}
+.srchForm {
+  border: 1px solid var(--green);
+  border-radius: 24px;
+  padding: 10px;
+  width: 40vw;
+  height: 48px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+input#srchField {
+  border: none;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+}
+input#srchField:focus {
+  outline: none;
+}
+input#srchField::-ms-fill ~ input#srchReset {
+  display: inline-block;
+}
+.socials i {
+  margin-left: 10px;
+}
+.socials i:hover {
+  opacity: .8;}
+i,
+.logo {
+  cursor: pointer;
+}
+/** ======= Popup Nav Bar ========  */
+.popup {
+  /* width: 0; */
+  height: 100vh;
+  background-color: #00000080;
+  z-index: 55;
+  position: fixed;
+  right: 0;
+  }
+#closerId {
+  font-size: 50px;
+  color: var(--green);
+  position: absolute;
+  left: 295px;
+  top: 0;
+}
+
+#rightNav {
+  position: absolute;
+  right: 0;
+  /* width: 0; */
+  height: 100vh;
+  background-color: var(--white);
+  display: grid;
+  place-items: center;
+}
+/***** Links Page  */
+.navContainer ul li {
+  list-style: none;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.navContainer ul li a {
+  text-decoration: none;
+  color: var(--green);
+  font-size: 24px;
+}
+.navContainer ul li a:hover {
+  color: var(--text);
+}
+
+/* ***** Cart Page  ****/
+.cartContainer {
+align-self: flex-start;
+width: 100%;
+padding:0 8%;
+margin-top: 80px;
+font-size: 20px;
+}
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total span:first-child,
+.itemDesc p{
+color: var(--text);
+}
+.cartContainer button {
+  width: 100%;
+  line-height: 22px;
+  border: none;
+  color: var(--white);
+  padding: 13px 0;
+  margin-top: 30px;
+}
+
+/* ***** User Page *** */
+.userContainer {
+  width: 90%;
+  padding: 20px 15px;
+  border: 1px solid black;
+}
+.userContainer * {
+  font-size: 15px;
+  color: var(--text);
+}
+.userContainer form #email,
+.userContainer form #pass {
+  width: 100%;
+  height: 44px;
+  line-height: 40px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.userContainer form button {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 18px !important;
+  color: var(--white) !important;
+}
+.userContainer h4 {
+  font-size: 20px;
+  color: var(--green);
+}
+.userContainer form a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+/****! Main section : Slides Using Animation  ****/
+main {
+  position: relative;/* for positioning the Slides' Controls (p.absolute) */
+}
+.slidesParent {
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.slideBox {
+  position: relative;
+  width: 100%;
+}
+.slideBox .slide {
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+.slidePhoto {
+  width: 100%;
+  animation: fadeOut 0.8s;
+}
+
+h1,
+h3,
+p {
+  line-height: 2;
+}
+.slideDesc h3 {
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 500;
+}
+h1 {
+  color: var(--green);
+  font-size: 52px;
+  font-weight: 600;
+}
+.slideDesc p {
+  color: var(--text);
+  font-size: 14px;
+}
+button,
+#subscribe {
+  background-color: var(--green);
+  color: var(--green-light);
+  font-size: 18px;
+  padding: 7px 22px;
+  margin-top: 12px;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+button:hover,
+#subscribe:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+/*** Slide Controls  ***/
+input#leftCntrl,
+input#rightCntrl {
+  display: none;
+}
+.sldLcntrl,
+.sldRcntrl {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  background-color: var(--white);
+  color: var(--green);
+  border: 1px solid var(--green);
+  box-shadow: var(--green) 1px 1px 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sldLcntrl {
+  left: 3vw;
+}
+.sldRcntrl {
+  right: 3vw;
+}
+.sldLcntrl:hover,
+.sldRcntrl:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+/*******! Offers Section: Using Grid  ******/
+.offersCnt {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-gap: 20px;
+}
+.offer {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+.offer:hover {
+  background-size: 170%;
+}
+
+.offer1 {
+  background-image: url("../images/banner-1.jpg");
+}
+.offer2 {
+  background-image: url("../images/banner-2.jpg");
+}
+.offer3 {
+  background-image: url("../images/banner-3.jpg");
+}
+.offerDesc {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.offerDesc p {
+  color: var(--text);
+  font-size: 18px;
+}
+h4 {
+  color: var(--green);
+  font-size: 21px;
+}
+.total h4 {
+  text-align: center;
+  margin-top: 20px;
+}
+/*******! Map Section  ******/
+.mapSection {
+  background-color: var(--green-light);
+  padding-bottom: 0;
+}
+.map {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mapCol * {
+  margin-bottom: 10px;
+}
+.linksCol  p {
+  font-size: 14px;
+  cursor: pointer;
+}
+.linksCol > p:hover i {
+margin-right: 20px;
+}
+.linksCol > p > i {
+  color: var(--green);
+  margin-right: 6px;
+  display: inline;
+}
+.mapCol {
+  width: 230px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  }
+input#inputEmail {
+  width: 100%;
+  height: 40px;
+  padding-left: 15px;
+  border: 1px solid var(--green);
+  outline: none;
+}
+footer {
+  background-color: var(--green);
+  color: var(--green-light);
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  }
+@media screen and (max-width: 991px) {
+  .container {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .sldLcntrl,
+  .sldRcntrl {
+  background-color: transparent;
+  top: initial; 
+  left: initial;
+  transform: initial;
+  bottom: 18px; /* The same as main bottom padding */
+  }
+  .sldLcntrl {
+  right: 65px;
+  }
+  .sldRcntrl {
+    right: 16px; /* For Good Alignement: The Same as Container Left Margin */
+  }
+}
+
+
+/*! ***** Animations ***** */
+
+@keyframes fadeOut {
+  0% { transform: scale(30%); }
+  100% {  transform: scale(100%);  }
+}
+.slideDesc {
+  width: 100%;
+  animation: trnaslating .4s .4s linear backwards;
+}
+@keyframes trnaslating {
+  0% {
+    transform: translateX(-20%);/** Alternatif2: margin-left: -30px; */ /** Alternatif3( with "position: relative;" in .slideDesc): left: -40px; */
+    opacity: 0;/*OR visibility: hidden; */
+  }
+  100% {
+    transform: translateX(0);/* margin-left: 0; OR  left: 0; */
+    opacity: 1;/*OR visibility: visible; */
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-720deg);
+  }
+}
+
+/*! Shop Page Styles  */
+
+.titleBar {
+  background-color: #244d4d;
+  padding: 50px 15px;
+}
