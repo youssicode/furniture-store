@@ -1,6 +1,6 @@
 document.getElementById("mainHeader").innerHTML = `
       <div class="container">
-        <a class="logo">
+        <a class="logo" href="index.html" alt="Home">
           <i class="fas fa-lightbulb"></i>
           <span>furni</span>
         </a>

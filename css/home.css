@@ -85,20 +85,17 @@ grid-gap: 20px;
   width: 100%;
   height: 250px;
   position: relative;
+  overflow: hidden;
 }
-.offer:hover {
-  background-size: 170%;
+.offer img{
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
-
-.offer1 {
-  background-image: url("../images/banner-1.jpg");
+.offer:hover img{
+  transform: scale(1.2);
 }
-.offer2 {
-  background-image: url("../images/banner-2.jpg");
-}
-.offer3 {
-  background-image: url("../images/banner-3.jpg");
-}
+/** ===== **/
 .offerDesc {
   position: absolute;
   left: 5%;

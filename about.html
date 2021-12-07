@@ -24,13 +24,8 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body onload="closePopup()">
-    <!--! =========== Including Popup Window ============== -->
-    <!--    -->
-    <div id="popupId" class="popup"> 
-    </div>
-    <!-- The Script Must be After the Element we want to Fill (popupId) -->
-    <script src="./js/includePopup.js"></script> 
+  <body>
+    
     <!--! ====== Including Header + Links ========= -->
     <header role="banner" id="mainHeader">    
     </header>
@@ -96,12 +91,18 @@
       </div>
     </main>
     
-    <!-- Including Map Links Section  -->
-    <div class="mapSection" id="mapId">
-
+    <!--! =========Including Map Links Section =================== -->
+    <div class="mapSection" id="mapId">     
     </div>
     <script src="./js/includeMap.js"></script>
-   
+
+    <!--! ===== Popup Window insertion then Hiding + closePopUp Function ==== -->
+    <div id="popupId" class="popup"> 
+    </div>
+    <!-- The Script Must be After the Element we want to Fill (popupId) -->
+    <script src="./js/includePopup.js"></script> 
+
+    <!--! ============= Main JS file =================== -->
     <script type="text/javascript" src="./js/script.js"></script>
   </body>
 </html>

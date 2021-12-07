@@ -2,34 +2,10 @@
 section {
   margin-bottom: 1rem;
 }
-/* .categTitle, */
-.sectionHeading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--green);
-  height: 70px;
-
-  border-bottom: 1px solid var(--green);
-  margin-bottom: 1rem;
-}
-/* .sectionHeading {
-} */
-h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--green);
-}
-.sectionHeading a {
-  color: var(--text);
-  font-size: 0.8rem;
-  text-decoration: none;
-}
-/* =============================== */
 section.welcome {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 15px;
+  gap: 25px;
   align-items: center;
 }
 section.welcome figure img {
@@ -41,6 +17,9 @@ aside.aboutIntro h5 {
   color: var(--text);
 }
 aside.aboutIntro h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--green);
   margin-top: 10px;
   margin-bottom: 10px;
 }

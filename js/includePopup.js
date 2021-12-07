@@ -72,3 +72,12 @@ document.getElementById("popupId").innerHTML = `
 
       </div>
 `;
+function closePopup() {
+  document.getElementById("rightNav").style.width= "0";
+  document.getElementById("popupId").style.width= "0";
+  document.getElementById("navId").style.display= "none";
+  document.getElementById("cartId").style.display= "none";
+  document.getElementById("userId").style.display= "none";
+  document.getElementById("closerId").style.animation = "none";
+}
+closePopup();

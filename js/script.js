@@ -36,7 +36,7 @@ function displaySlide (active,dsbl1,dsbl2) {
 }
 
 //! Open and Close Popup's windows 
-closePopup() //we call it on page loading to hide all popup window's elements, we can initialise this in css file if we want
+// closePopup() //we call it on page loading to hide all popup window's elements, we can initialise this in css file if we want
 function displayNav() {
   displayRightNav();
   document.getElementById("navId").style.display= "initial";
@@ -59,14 +59,14 @@ function displayUser() {
   displayRightNav();
   document.getElementById("userId").style.display= "initial";
 }
-function closePopup() {
-  document.getElementById("rightNav").style.width= "0";
-  document.getElementById("popupId").style.width= "0";
-  document.getElementById("navId").style.display= "none";
-  document.getElementById("cartId").style.display= "none";
-  document.getElementById("userId").style.display= "none";
-  document.getElementById("closerId").style.animation = "none";
-}
+// function closePopup() {
+//   document.getElementById("rightNav").style.width= "0";
+//   document.getElementById("popupId").style.width= "0";
+//   document.getElementById("navId").style.display= "none";
+//   document.getElementById("cartId").style.display= "none";
+//   document.getElementById("userId").style.display= "none";
+//   document.getElementById("closerId").style.animation = "none";
+// }
 function displayRightNav() {
   document.getElementById("popupId").style.width= "100vw";
   document.getElementById("rightNav").style= "width: 350px";

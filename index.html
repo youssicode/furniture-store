@@ -27,102 +27,13 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body onload="closePopup()">
-    <!--! ===== Popup Window ========= -->
-    <div id="popupId" class="popup">
-      <div id="rightNav">
-        <div id="closerId" onclick="closePopup()"><i class="fas fa-times"></i></div>
-
-        <div id="navId" class="navContainer">
-          <ul>
-            <li><a href="./index.html">home</a></li>
-            <li><a href="./shop.html">shop</a></li>
-            <li><a href="./about.html">about</a></li>
-            <li><a href="#">team</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">contact</a></li>
-          </ul>
-        </div>
-
-        <div id="cartId" class="cartContainer">
-          <div id="cartItem1" class="cartItem"> 
-            <img src="./images/cart-img-1.jpg" alt="item1">
-            <div class="itemDesc">
-              <h5>modern furniture</h5>
-              <p>1x $140.00</p>
-            </div>
-            <!-- this.id => Id of the element we clicked on-->
-            <i  onclick="deleteFromCart(this.id)" id="closeItem1" class="fas fa-times"></i>
-          </div>
-
-          <div id="cartItem2" class="cartItem">
-            <img src="./images/cart-img-2.jpg" alt="item1">
-            <div class="itemDesc">
-              <h5>modern furniture</h5>
-              <p>1x $140.00</p>
-            </div>
-            <i  onclick="deleteFromCart(this.id)" id="closeItem2" class="fas fa-times"></i>
-          </div>
-
-          <div id="cartItem3" class="cartItem">
-            <img src="./images/cart-img-3.jpg" alt="item1">
-            <div class="itemDesc">
-              <h5>modern furniture</h5>
-              <p>1x $140.00</p>
-            </div>
-            <i onclick="deleteFromCart(this.id)" id="closeItem3" class="fas fa-times"></i>
-          </div>
-          
-          <div id="cartItem4" class="cartItem">
-            <img src="./images/cart-img-4.jpg" alt="item1">
-            <div class="itemDesc">
-              <h5>modern furniture</h5>
-              <p>1x $140.00</p>
-            </div>
-            <i onclick="deleteFromCart(this.id)" id="closeItem4" class="fas fa-times"></i>
-          </div>
-
-          <div class="total">
-            <h4><span>total : </span><span id="totPrice"></span></h4>
-          </div>
-          <button>checkout cart</button>
-        </div>
-
-        <div id="userId" class="userContainer">
-          <h4>login form</h4>
-          <form action="post">
-            <input type="email" name="email" id="email" placeholder="enter your email" autocomplete="off">
-            <input type="password" name="pass" id="pass" placeholder="enter your password" autocomplete="off">
-            <input type="checkbox" id="rememberMe">
-            <label for="rememberMe">Remember Me</label>
-            <button>login now</button>
-            <p>forget password? <a href="#">click here</a></p>
-            <p>don't have an account? <a href="#">create one</a></p>
-          </form>
-        </div>
-
-      </div>  
-    </div>
-
-<!--! ====== Header + Links ========= -->
-    <header role="banner" id="mainHeader">
-      <div class="container">
-        <a class="logo">
-          <i class="fas fa-lightbulb"></i>
-          <span>furni</span>
-        </a>
-          <form role="search" class="srchForm" id="srch-form">
-            <input type="search" id="srchField" name="s" autocomplete="off" placeholder="Search here..." />
-            <i class="fas fa-search"></i>
-          </form>
-        <div role="navigation" class="socials">
-          <label onclick="displayNav()" ><i class="fas fa-bars"></i></label>
-          <label onclick="displaySrchForm()" class="searchLink"><i class="fas fa-search"></i></label>
-          <label onclick="displayCart()"><i class="fas fa-shopping-cart"></i></label>
-          <label onclick="displayUser()"><i class="fas fa-user"></i></label>
-        </div>
-      </div>
+  <body>
+    
+    <!--! ====== Header + Links included========= -->
+    <header role="banner" id="mainHeader">    
     </header>
+    <!-- The Script Must be After the Element we want to Fill (mainHeader) -->
+    <script src="./js/includeHeaderBar.js"></script>
     <!--! -------- Main Screen  -------- -->
     <main>
       <div class="container slidesParent">
@@ -188,6 +99,7 @@
     <div class="offers">
       <div class="container offersCnt">
         <div class="offer offer1">
+          <img src="../images/banner-1.jpg" alt="Fourniture banner">
           <div class="offerDesc">
             <p>limited offer</p>
             <h4>upto 50% off</h4>
@@ -195,6 +107,7 @@
           </div>
         </div>
         <div class="offer offer2">
+          <img src="../images/banner-2.jpg" alt="Fourniture banner">
           <div class="offerDesc">
             <p>limited offer</p>
             <h4>upto 50% off</h4>
@@ -202,6 +115,7 @@
           </div>
         </div>
         <div class="offer offer3">
+          <img src="../images/banner-3.jpg" alt="Fourniture banner">
           <div class="offerDesc">
             <p>limited offer</p>
             <h4>upto 50% off</h4>
@@ -210,53 +124,19 @@
         </div>
       </div>
     </div>
-    <!-- Map Links Section  -->
-    <div class="mapSection">
-      <div class="container map">
-        <div class="mapCol">
-          <h4>quick links</h4>
-          <div class="linksCol">
-            <p><i class="fas fa-arrow-right"></i> <span>home</span></p>
-              <p><i class="fas fa-arrow-right"></i> <span>shop</span></p>
-                <p><i class="fas fa-arrow-right"></i> <span>about</span></p>
-                  <p><i class="fas fa-arrow-right"></i> <span>team</span></p>
-                    <p><i class="fas fa-arrow-right"></i> <span>blog</span></p>
-                      <p><i class="fas fa-arrow-right"></i> <span>contact</span></p>
-            </div>
-        </div>
-        <div class="mapCol">
-          <h4>extra links</h4>
-          <div class="linksCol">
-            <p><i class="fas fa-arrow-right"></i> <span>my orders</span></p>
-              <p><i class="fas fa-arrow-right"></i> <span>my wishlist</span></p>
-                <p><i class="fas fa-arrow-right"></i> <span>my account</span></p>
-                  <p><i class="fas fa-arrow-right"></i> <span>my favorite</span></p>
-                    <p><i class="fas fa-arrow-right"></i> <span>terms of user</span></p>
-            </div>
-        </div>
-        <div class="mapCol">
-          <h4>extra links</h4>
-          <div class="linksCol">
-            <p><i class="fab fa-facebook-f"></i> <span>my orders</span></p>
-              <p><i class="fab fa-twitter"></i> <span>my wishlist</span></p>
-                <p><i class="fab fa-instagram"></i> <span>my account</span></p>
-                  <p><i class="fab fa-linkedin"></i> <span>my favorite</span></p>
-                    <p><i class="fab fa-pinterest"></i> <span>terms of user</span></p>
-            </div>
-        </div>
-        <div class="mapCol">
-          <h4>newsletter</h4>
-            <p>Subscribe For Latest Updates</p>
-            <form action="post">
-              <input type="email" id="inputEmail" name="email" placeholder="Enter your email"   autocomplete="off">
-              <input type="button" id="subscribe" value="Subscribe">
-            </form>
-      </div>
+    
+    <!--! =========Including Map Links Section =================== -->
+    <div class="mapSection" id="mapId">     
     </div>
-   <footer>
-    created by Mr. web designer | 
-    cloned by youssef el-hrouzi!
-    </footer>
+    <script src="./js/includeMap.js"></script>
+
+    <!--! ===== Popup Window insertion then Hiding + closePopUp Function ==== -->
+    <div id="popupId" class="popup"> 
+    </div>
+    <!-- The Script Must be After the Element we want to Fill (popupId) -->
+    <script src="./js/includePopup.js"></script> 
+    
+    <!--! ============= Main JS file =================== -->
     <script type="text/javascript" src="./js/script.js"></script>
   </body>
 </html>

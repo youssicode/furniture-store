@@ -2,28 +2,6 @@
 section {
   margin-bottom: 1rem;
 }
-.categTitle,
-.sectionHeading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--green);
-  height: 70px;
-}
-.sectionHeading {
-  border-bottom: 1px solid var(--green);
-  margin-bottom: 1rem;
-}
-h2 {
-  font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--green);
-}
-.sectionHeading a {
-  color: var(--text);
-  font-size: 0.8rem;
-  text-decoration: none;
-}
 .categorieCardParent {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px , 1fr));

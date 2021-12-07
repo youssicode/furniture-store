@@ -41,7 +41,7 @@ document.getElementById("mapId").innerHTML = `
   </div>
 </div>
 <footer>
-    created by Mr. web designer | 
-    cloned by youssef el-hrouzi!
+    design by Mr. web designer channel | 
+    cloned & created by youssef el-hrouzi!
 </footer>
 `;
