@@ -33,7 +33,7 @@ aside.aboutIntro h2 {
   width: 300px;
   flex-grow: 1;
   padding: 15px 25px;
-  border: 1px solid var(--green);
+  border: var(--border);
   display: grid;
   place-items: center;
 }

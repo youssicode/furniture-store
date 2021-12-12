@@ -5,6 +5,7 @@
   --white: #fff;
   --yellow: yellow;
   --lightgray: #f2f2f2;
+  --border: 1px solid var(--green);
 }
 * {
   padding: 0;
@@ -45,7 +46,7 @@ main,
 }
 header {
   background-color: var(--green-light);
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 88;
 }
@@ -58,7 +59,7 @@ header .container {
   color: var(--green);
 }
 header .srchForm {
-  border: 1px solid var(--green);
+  border: var(--border);
   border-radius: 24px;
   padding: 10px;
   width: 50vw;
@@ -112,7 +113,6 @@ i,
 #rightNav {
   position: absolute;
   right: 0;
-  /* width: 0; */
   height: 100vh;
   background-color: var(--white);
   display: grid;
@@ -163,7 +163,7 @@ color: var(--text);
 .userContainer {
   width: 90%;
   padding: 20px 15px;
-  border: 1px solid black;
+  border: var(--border);
 }
 .userContainer * {
   font-size: 15px;
@@ -257,7 +257,7 @@ input#inputEmail {
   width: 100%;
   height: 40px;
   padding-left: 15px;
-  border: 1px solid var(--green);
+  border: var(--border);
   outline: none;
 }
 footer {
@@ -301,8 +301,7 @@ footer {
   align-items: center;
   color: var(--green);
   height: 70px;
-
-  border-bottom: 1px solid var(--green);
+  border-bottom: var(--border);
   margin-bottom: 1rem;
 }
 .sectionHeading h2 {
@@ -332,7 +331,7 @@ html {
   }  
   header .srchForm {
     display: none;
-    position: absolute; /* Header is position Fixed */
+    position: absolute; /* Header is position Sticky */
     width: 100%;
     left: 0;
     max-width: none;

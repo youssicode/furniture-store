@@ -54,7 +54,7 @@ input#rightCntrl {
   font-weight: 500;
   background-color: var(--white);
   color: var(--green);
-  border: 1px solid var(--green);
+  border: var(--border);
   box-shadow: var(--green) 1px 1px 6px;
   position: absolute;
   top: 50%;
@@ -132,8 +132,9 @@ object-fit: cover;
 /*! ***** Animations ***** */
 
 @keyframes fadeOut {
-  0% { transform: scale(30%); }
-  100% {  transform: scale(100%);  }
+  0% { 
+    transform: scale(30%);
+    opacity: 0; }
 }
 .slideDesc {
   width: 100%;
@@ -144,8 +145,5 @@ object-fit: cover;
     transform: translateX(-20%);/** Alternatif2: margin-left: -30px; */ /** Alternatif3( with "position: relative;" in .slideDesc): left: -40px; */
     opacity: 0;/*OR visibility: hidden; */
   }
-  100% {
-    transform: translateX(0);/* margin-left: 0; OR  left: 0; */
-    opacity: 1;/*OR visibility: visible; */
-  }
+  
 }
