@@ -47,7 +47,7 @@ function displaySrchForm() {
     document.getElementById("srch-form").classList.add("srchFormWide");
     cntrl = false;
   } else {
-    document.getElementById("srch-form").classList.remove("srchFormWide");
+    document.getElementById("#srch-form").classList.remove("srchFormWide");
     cntrl = true;
   }
 }
@@ -59,14 +59,7 @@ function displayUser() {
   displayRightNav();
   document.getElementById("userId").style.display= "initial";
 }
-// function closePopup() {
-//   document.getElementById("rightNav").style.width= "0";
-//   document.getElementById("popupId").style.width= "0";
-//   document.getElementById("navId").style.display= "none";
-//   document.getElementById("cartId").style.display= "none";
-//   document.getElementById("userId").style.display= "none";
-//   document.getElementById("closerId").style.animation = "none";
-// }
+
 function displayRightNav() {
   document.getElementById("popupId").style.width= "100vw";
   document.getElementById("rightNav").style= "width: 350px";

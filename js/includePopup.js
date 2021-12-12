@@ -59,7 +59,7 @@ document.getElementById("popupId").innerHTML = `
 
         <div id="userId" class="userContainer">
           <h4>login form</h4>
-          <form action="post">
+          <form action="">
             <input type="email" name="email" id="email" placeholder="enter your email">
             <input type="password" name="pass" id="pass" placeholder="enter your password">
             <input type="checkbox" id="rememberMe">
